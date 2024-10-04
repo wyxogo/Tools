@@ -47,6 +47,11 @@ else
   echo "alias ll='ls -alF'" >> $HOME/.zshrc
   echo "alias la='ls -A'" >> $HOME/.zshrc
   echo "alias l='ls -CF'" >> $HOME/.zshrc
+  echo "alias tat='tmux attach -t'" >> $HOME/.zshrc
+  echo "alias tls='tmux ls'" >> $HOME/.zshrc
+  echo "alias tnt='tmux new -t'" >> $HOME/.zshrc
+  echo "alias ca='conda activate'" >> $HOME/.zshrc
+  echo "alias gc='git clone'" >> $HOME/.zshrc
 fi
 
 echo "# Color Prompt" >> $HOME/.zshrc
