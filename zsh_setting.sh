@@ -52,6 +52,7 @@ else
   echo "alias tnt='tmux new -t'" >> $HOME/.zshrc
   echo "alias ca='conda activate'" >> $HOME/.zshrc
   echo "alias gc='git clone'" >> $HOME/.zshrc
+  echo "alias ggc='gg git clone'" >> $HOME/.zshrc
 fi
 
 echo "# Color Prompt" >> $HOME/.zshrc

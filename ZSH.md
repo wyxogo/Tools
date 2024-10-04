@@ -12,7 +12,5 @@ image: https://github.githubassets.com/assets/gist-og-image-54fd7dc0713e.png
 [[zsh_setting.sh]]
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/wyxogo/Tools/refs/heads/main/zsh_setting.sh)"
-zsh
-source ~/.zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/wyxogo/Tools/refs/heads/main/zsh_setting.sh)" && zsh && source ~/.zshrc
 ```
