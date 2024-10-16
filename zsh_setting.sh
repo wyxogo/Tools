@@ -78,7 +78,7 @@ fi
 # get default shell
 current_shell=$(echo $SHELL | awk -F/ '{print $NF}')
 
-# checck default shell
+# check default shell
 if [ "$(basename "$current_shell")" != "zsh" ]; then
     # zsh shell
     echo "Switching default shell to Zsh..."
