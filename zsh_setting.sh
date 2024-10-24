@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+if [ ! -d "$HOME/.zsh/plugins" ]; then
+    mkdir -p "$HOME/.zsh/plugins"
+fi
 # Auto complete plugin
 autosuggestions_dir="$HOME/.zsh/plugins/zsh-autosuggestions"
 if [ ! -d "$autosuggestions_dir" ]; then
