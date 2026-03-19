@@ -55,7 +55,6 @@ else
   echo "alias tnt='tmux new -t'" >> $HOME/.zshrc
   echo "alias ca='conda activate'" >> $HOME/.zshrc
   echo "alias gc='git clone'" >> $HOME/.zshrc
-  echo "alias ggc='gg git clone'" >> $HOME/.zshrc
 fi
 
 echo "# Color Prompt" >> $HOME/.zshrc
@@ -67,10 +66,10 @@ echo "" >> $HOME/.zshrc
 echo "# Setting Prompt" >> $HOME/.zshrc
 echo "PROMPT='❰%{\$fg[green]%}%n%{\$reset_color%}|%{\$fg[yellow]%}%1~%{\$reset_color%}%{\$fg[blue]%}\$(git branch --show-current 2>/dev/null | xargs -I branch echo \"(branch)\")%{\$reset_color%}❱ '" >> $HOME/.zshrc
 
-echo "" >> $HOME/.zshrc
-echo 'export PATH=/usr/local/cuda/bin:$PATH' >> $HOME/.zshrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> $HOME/.zshrc
-echo "" >> $HOME/.zshrc
+# echo "" >> $HOME/.zshrc
+# echo 'export PATH=/usr/local/cuda/bin:$PATH' >> $HOME/.zshrc
+# echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> $HOME/.zshrc
+# echo "" >> $HOME/.zshrc
 
 # check zsh
 if ! command -v zsh &> /dev/null; then
