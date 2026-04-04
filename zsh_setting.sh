@@ -26,7 +26,6 @@ if [ -f $HOME/.zshrc ]; then
 fi
 
 echo "" > $HOME/.zshrc
-
 # add to $HOME/.zshrc
 if grep -q "zsh-autosuggestions.zsh" "$HOME/.zshrc"; then
   echo "zsh-autosuggestions already enabled in $HOME/.zshrc. Skipping addition."
@@ -34,13 +33,11 @@ else
   echo "Enabling zsh-autosuggestions in $HOME/.zshrc..."
   echo "source $autosuggestions_dir/zsh-autosuggestions.zsh" >> "$HOME/.zshrc"
 fi
-
 echo "# AutoSuggestions History settings" >> $HOME/.zshrc
 echo 'export HISTFILE="$HOME/.zsh_history"' >> $HOME/.zshrc
 echo 'export HISTSIZE=5000' >> $HOME/.zshrc
 echo 'export SAVEHIST=5000' >> $HOME/.zshrc
 echo "" >> $HOME/.zshrc
-
 echo "# AutoSuggestions History options" >> $HOME/.zshrc
 # Append history to the history file immediately, not just when a shell exits
 echo 'setopt INC_APPEND_HISTORY' >> $HOME/.zshrc  
@@ -51,13 +48,13 @@ echo 'setopt EXTENDED_HISTORY' >> $HOME/.zshrc
 # Do not record an event that was just recorded again
 echo 'setopt HIST_IGNORE_DUPS' >> $HOME/.zshrc    
 echo "" >> $HOME/.zshrc
-
 if grep -q "zsh-syntax-highlighting.zsh" "$HOME/.zshrc"; then
   echo "zsh-syntax-highlighting already enabled in $HOME/.zshrc. Skipping addition."
 else
   echo "Enabling zsh-syntax-highlighting in $HOME/.zshrc..."
   echo "source $highlighting_dir/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
 fi
+echo "" >> $HOME/.zshrc
 
 if grep -q "some more aliases" "$HOME/.zshrc"; then
   echo "Some more aliases already enabled in $HOME/.zshrc. Skipping addition."
