@@ -35,6 +35,23 @@ else
   echo "source $autosuggestions_dir/zsh-autosuggestions.zsh" >> "$HOME/.zshrc"
 fi
 
+echo "# AutoSuggestions History settings" >> $HOME/.zshrc
+echo 'export HISTFILE="$HOME/.zsh_history"' >> $HOME/.zshrc
+echo 'export HISTSIZE=5000' >> $HOME/.zshrc
+echo 'export SAVEHIST=5000' >> $HOME/.zshrc
+echo "" >> $HOME/.zshrc
+
+echo "# AutoSuggestions History options" >> $HOME/.zshrc
+# Append history to the history file immediately, not just when a shell exits
+echo 'setopt INC_APPEND_HISTORY' >> $HOME/.zshrc  
+# Share history across all active terminal sessions
+echo 'setopt SHARE_HISTORY' >> $HOME/.zshrc       
+# Write the history file in the ":start:elapsed; command" format
+echo 'setopt EXTENDED_HISTORY' >> $HOME/.zshrc    
+# Do not record an event that was just recorded again
+echo 'setopt HIST_IGNORE_DUPS' >> $HOME/.zshrc    
+echo "" >> $HOME/.zshrc
+
 if grep -q "zsh-syntax-highlighting.zsh" "$HOME/.zshrc"; then
   echo "zsh-syntax-highlighting already enabled in $HOME/.zshrc. Skipping addition."
 else
